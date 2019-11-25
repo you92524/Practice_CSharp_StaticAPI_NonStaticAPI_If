@@ -8,6 +8,10 @@ public class Zombie : MonoBehaviour
     public float atk;
     [Header("玩家")]
     public Player player;
+    [Header("喇叭")]
+    public AudioSource aud;
+    [Header("音效")]
+    public AudioClip soundAtk;
 
     private void Update()
     {
@@ -18,6 +22,7 @@ public class Zombie : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.B))
         {
+            aud.PlayOneShot(soundAtk, 1);
             atk = Random.Range(30f, 50f);
             player.Damage(atk);
         }

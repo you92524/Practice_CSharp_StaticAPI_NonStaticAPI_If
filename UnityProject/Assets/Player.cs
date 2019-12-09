@@ -1,4 +1,4 @@
-﻿
+﻿using UnityEngine.UI;
 using UnityEngine;
 
 public class Player : MonoBehaviour
@@ -13,21 +13,26 @@ public class Player : MonoBehaviour
     public AudioClip Sound_Atk;
     [Header("殭屍")]
     public GameObject ZB;
+    [Header("攻擊")]
+    public float x ;
 
-    private void attack()
+
+    public void attack()
     {
         if (Input.GetKeyDown(KeyCode.A))
         {
+            x = Random.Range(0f, Atk);
             print("玩家攻擊");
-            print("玩家攻擊力:" + Random.Range(0f, Atk));
+            print("玩家攻擊力:" + x);
+            
         }
         
 
     }
 
-    private void Playerhurt()
+    public void Playerhurt()
     {
-        
+        if(ZB.a)
 
     }
 

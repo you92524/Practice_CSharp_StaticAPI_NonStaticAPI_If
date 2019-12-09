@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using UnityEngine.UI;
+using UnityEngine;
 
 public class Zombie : MonoBehaviour
 {
@@ -14,6 +15,9 @@ public class Zombie : MonoBehaviour
     public AudioClip Sound_Atk;
     [Header("玩家")]
     public GameObject PLAYER;
+    [Header("攻擊")]
+    public float y ;
+
 
 
     private void attack()
@@ -22,12 +26,16 @@ public class Zombie : MonoBehaviour
         
         if (Input.GetKeyDown(KeyCode.B))
         {
+            y = Random.Range(0f, Atk);
             print("殭屍攻擊");
-            print(PLAYER);
-            print("殭屍攻擊力:" + Random.Range(0f, Atk));
+            print("殭屍攻擊力:" + y);
         }
 
 
+    }
+    public void ZBhurt()
+    { 
+        //HP=HP-
     }
 
     // Start is called before the first frame update

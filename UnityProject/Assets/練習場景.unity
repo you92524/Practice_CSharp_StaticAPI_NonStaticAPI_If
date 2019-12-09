@@ -200,6 +200,8 @@ MonoBehaviour:
   Aud: {fileID: 90077758}
   Sound_Atk: {fileID: 8300000, guid: b2814898b8005b04dbb2fadf2cf26112, type: 3}
   PLAYER: {fileID: 1284488705}
+  y: 0
+  p: {fileID: 0}
 --- !u!82 &90077758
 AudioSource:
   m_ObjectHideFlags: 0
@@ -467,6 +469,8 @@ MonoBehaviour:
   Aud: {fileID: 1284488707}
   Sound_Atk: {fileID: 8300000, guid: e5596bb1fd662e5418d0d33c355a4478, type: 3}
   ZB: {fileID: 90077756}
+  x: 20
+  z: {fileID: 0}
 --- !u!82 &1284488707
 AudioSource:
   m_ObjectHideFlags: 0
